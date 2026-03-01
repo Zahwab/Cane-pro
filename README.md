@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# Cane-Pro: Advanced AI Dashboard for Sugarcane Quality Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cane-Pro is a state-of-the-art, AI-powered web dashboard designed to revolutionize sugarcane quality assessment. Built with React, Vite, and TypeScript, it features a premium, glassmorphic dark theme and seamless data integration, surpassing existing market solutions with an array of "Category Killer" capabilities.
 
-Currently, two official plugins are available:
+## 🌟 Key Capabilities
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Unified Stream Analysis:** Real-time data processing leveraging computer vision for detection of trash, damage, and quality trends.
+- **Sensor Digital Twin Diagnostics:** Highly detailed diagnostic visualizations for factory-level sensor configurations.
+- **Predictive Calibration Management:** Intelligent planning algorithms to maintain and calibrate analytics sensors accurately.
+- **Spatial Tracking:** Advanced geographic visualizations for pinpointing and tracking the origin of sugarcane yields.
+- **Live Economic Impact Calculation:** Automatically quantifies business impact and yield forecasts directly from sugarcane analysis.
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
+Make sure you have Node.js (>= 16) and npm/yarn installed.
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clone the repository:**
+   ```bash
+   git clone <repository_url>
+   cd Cane-pro
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## 🏗️ Tech Stack
+
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Typing:** TypeScript
+- **Styling:** Custom Vanilla CSS + `clsx` (Glassmorphism & Dark Theme)
+- **Icons:** `lucide-react`
+- **Charts:** `recharts` for rich data visualization
+
+## 📖 Further Reading
+
+Please refer to the following documents for more details:
+- [Features](FEATURES.md) - Deep dive into all available dashboard modules.
+- [Architecture](ARCHITECTURE.md) - High-level system design and component breakdown.
+- [Changelog](CHANGELOG.md) - History of updates and improvements.
+- [Contributing](CONTRIBUTING.md) - Guidelines for contributing to the project.
+
+---
+
+*Cane-Pro — Next-Generation Agricultural Intelligence.*

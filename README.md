@@ -1,6 +1,3 @@
-<div align="center">
-  <img src="public/logo.png" alt="Cane-Pro Logo" width="150" />
-</div>
 
 # Cane-Pro: Advanced AI Dashboard for Sugarcane Quality Assessment
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)

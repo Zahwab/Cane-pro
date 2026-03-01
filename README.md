@@ -1,6 +1,8 @@
-# Cane-Pro: Advanced AI Dashboard for Sugarcane Quality Assessment
+<div align="center">
+  <img src="public/logo.png" alt="Cane-Pro Logo" width="150" />
+</div>
 
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+# Cane-Pro: Advanced AI Dashboard for Sugarcane Quality Assessment
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)
@@ -8,8 +10,7 @@
 Cane-Pro is a state-of-the-art, AI-powered web dashboard designed to revolutionize sugarcane quality assessment. Built with React, Vite, and TypeScript, it features a premium, glassmorphic dark theme and seamless data integration, surpassing existing market solutions with an array of "Category Killer" capabilities.
 
 <p align="center">
-  <!-- Placeholder for a high-quality dashboard screenshot or GIF -->
-  <img src="https://via.placeholder.com/800x450/1a1a1a/ffffff?text=Cane-Pro+Dashboard+Preview" alt="Cane-Pro Dashboard Preview">
+  <img src="public/banner.png" alt="Cane-Pro Banner">
 </p>
 
 ## 🌟 Key Capabilities

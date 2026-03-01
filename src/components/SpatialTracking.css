@@ -1,0 +1,128 @@
+.spatial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.spatial-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.map-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-panel h3 {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.truck-list table th {
+    padding-bottom: 16px;
+}
+
+.status-pill {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-pill.excellent {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+}
+
+.status-pill.optimal {
+    background: rgba(79, 172, 254, 0.2);
+    color: var(--primary-accent);
+}
+
+.status-pill.warning {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--warning);
+}
+
+.status-pill.poor {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+}
+
+.terminal-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-panel h3 {
+    margin-bottom: 24px;
+}
+
+.terminal-window {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+}
+
+.terminal-header {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.log-line {
+    font-size: 0.85rem;
+    display: flex;
+    gap: 12px;
+}
+
+.log-line .timestamp {
+    color: var(--text-muted);
+}
+
+.log-line .message {
+    color: #ccc;
+}
+
+.text-primary .message {
+    color: var(--primary-glow);
+    text-shadow: 0 0 5px var(--primary-glow);
+}
+
+.typing {
+    opacity: 0.6;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

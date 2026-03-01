@@ -1,0 +1,92 @@
+.overview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.economic-ticker {
+    padding: 16px 24px;
+    background: rgba(20, 24, 32, 0.8);
+    border-color: rgba(79, 172, 254, 0.2);
+    min-width: 280px;
+}
+
+.ticker-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.ticker-value {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text-danger {
+    color: var(--danger);
+    text-shadow: 0 0 10px var(--danger-glow);
+}
+
+.text-success {
+    color: var(--success);
+    text-shadow: 0 0 10px var(--success-glow);
+}
+
+.text-warning {
+    color: var(--warning);
+    text-shadow: 0 0 10px var(--warning-glow);
+}
+
+.ticker-alert {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--warning);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-flex;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.metric-footer {
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+.charts-section {
+    flex: 1;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-header {
+    margin-bottom: 24px;
+}
+
+.chart-wrapper {
+    flex: 1;
+    width: 100%;
+}

@@ -8,13 +8,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .economic-ticker {
     padding: 16px 24px;
     background: rgba(20, 24, 32, 0.8);
     border-color: rgba(79, 172, 254, 0.2);
-    min-width: 280px;
+    min-width: 240px;
+    flex: 1;
 }
 
 .ticker-label {

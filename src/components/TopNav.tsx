@@ -1,15 +1,25 @@
 import React from 'react';
-import { Bell, User, Search } from 'lucide-react';
+import { Bell, User, Search, Menu } from 'lucide-react';
 import './TopNav.css';
 
-export const TopNav: React.FC = () => {
+interface TopNavProps {
+    toggleSidebar?: () => void;
+}
+
+export const TopNav: React.FC<TopNavProps> = ({ toggleSidebar }) => {
     return (
         <header className="top-nav glass-panel">
-            <div className="search-bar">
-                <Search size={18} className="text-muted" />
-                <input type="text" placeholder="Search parameters or logs..." />
+            <div className="nav-left">
+                {toggleSidebar && (
+                    <button className="menu-btn icon-btn" onClick={toggleSidebar}>
+                        <Menu size={24} />
+                    </button>
+                )}
+                <div className="search-bar">
+                    <Search size={18} className="text-muted" />
+                    <input type="text" placeholder="Search parameters or logs..." />
+                </div>
             </div>
-
             <div className="nav-actions">
                 <button className="icon-btn">
                     <div className="notification-dot"></div>

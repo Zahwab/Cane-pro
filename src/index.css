@@ -350,6 +350,15 @@ h2 {
   display: grid;
   grid-template-columns: 280px 1fr;
   min-height: 100vh;
+  position: relative;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -364,8 +373,49 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  height: 100vh;
   overflow-y: auto;
+  flex: 1;
+}
+
+/* Sidebar Overlay for Mobile */
+.sidebar-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  backdrop-filter: blur(4px);
+}
+
+/* Main Layout Media Queries */
+@media (max-width: 1024px) {
+  .dashboard-layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+  }
+
+  .main-content {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .glass-panel {
+    padding: 16px;
+  }
 }
 
 /* Data Table Styles for Custom Look */

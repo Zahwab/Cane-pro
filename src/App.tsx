@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { TopNav } from './components/TopNav';
 import { Overview } from './components/Overview';
@@ -9,6 +9,12 @@ import { SpatialTracking } from './components/SpatialTracking';
 
 function App() {
   const [activeTab, setActiveTab] = useState('overview');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Close sidebar on tab change (useful for mobile)
+  useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [activeTab]);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -21,11 +27,21 @@ function App() {
     }
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="dashboard-layout">
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        <TopNav />
+      {isSidebarOpen && (
+        <div
+          className="sidebar-overlay"
+          onClick={() => setIsSidebarOpen(false)}
+        ></div>
+      )}
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <div className="main-wrapper">
+        <TopNav toggleSidebar={toggleSidebar} />
         <main className="main-content">
           {renderContent()}
         </main>
